@@ -10,8 +10,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 0) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_14_105638) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "competitions", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.boolean "completed"
+    t.bigint "game_id", null: false
+    t.bigint "opp_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_competitions_on_game_id"
+    t.index ["opp_id"], name: "index_competitions_on_opp_id"
+    t.index ["user_id"], name: "index_competitions_on_user_id"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string "platform"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.bigint "competition_id", null: false
+    t.string "token"
+    t.boolean "win?"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["competition_id"], name: "index_results_on_competition_id"
+    t.index ["user_id"], name: "index_results_on_user_id"
+  end
+
+  create_table "stats", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "competition_id", null: false
+    t.string "name"
+    t.integer "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["competition_id"], name: "index_stats_on_competition_id"
+    t.index ["user_id"], name: "index_stats_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "first_name"
+    t.string "email"
+    t.string "gamer_tag"
+    t.integer "win"
+    t.integer "loss"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "competitions", "games"
+  add_foreign_key "competitions", "users"
+  add_foreign_key "competitions", "users", column: "opp_id"
+  add_foreign_key "results", "competitions"
+  add_foreign_key "results", "users"
+  add_foreign_key "stats", "competitions"
+  add_foreign_key "stats", "users"
 end
