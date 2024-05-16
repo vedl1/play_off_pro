@@ -7,3 +7,51 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Game.destroy_all
+User.destroy_all
+
+User.create!(
+  email: "minankahai@gmail.com",
+  password: "123456",
+  first_name: "minan",
+  gamer_tag: "minkah"
+)
+
+User.create!(
+  email: "gerald@gmail.com",
+  password: "123456",
+  first_name: "gerald",
+  gamer_tag: "gerald14k"
+  )
+
+Game.create!(
+  platform: "PC",
+  title: "FIFA"
+)
+
+Game.create!(
+  platform: "PC",
+  title: "Tekken"
+)
+
+Game.create!(
+  platform: "Mobile",
+  title: "Call Of Duty"
+)
+
+Game.create!(
+  platform: "Playstation",
+  title: "UFC"
+)
+
+Game.create!(
+  platform: "Xbox",
+  title: "WWE"
+)
+
+Competition.create!(
+  user: User.first,
+  game: Game.all.sample,
+  opp: User.second,
+  wager: 10.00
+)
