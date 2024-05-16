@@ -19,6 +19,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_15_144626) do
     t.boolean "completed"
     t.bigint "game_id", null: false
     t.bigint "opp_id"
+    t.boolean "accepted?"
+    t.float "wager"
+    t.string "platform"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_competitions_on_game_id"
@@ -28,6 +31,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_15_144626) do
 
   create_table "games", force: :cascade do |t|
     t.string "platform"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -55,7 +59,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_15_144626) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
     t.string "first_name"
     t.string "email"
     t.string "gamer_tag"
