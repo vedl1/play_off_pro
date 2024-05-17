@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
+  get "competitions/:id/invitation", to: "competitions#invitation", as: :competition_invitation
+  get "/loading", to: "competitions#loading"
+  get "/accept", to: "competitions#accept"
   root to: "pages#home"
   resources :games do
     resources :competitions, only: [:new, :create]
