@@ -34,27 +34,32 @@ User.create!(
 
 Game.create!(
   platform: "PC",
-  title: "FIFA"
+  title: "FIFA",
+  image_url: "https://imageio.forbes.com/specials-images/imageserve/653c020c4d25984193efa626/FC24/0x0.jpg?format=jpg&crop=1400,786,x0,y0,safe&width=960"
 )
 
 Game.create!(
   platform: "PC",
-  title: "Tekken"
+  title: "Tekken",
+  image_url: "https://i.ytimg.com/vi/bA49WgGOKp4/maxresdefault.jpg"
 )
 
 Game.create!(
   platform: "Mobile",
-  title: "Call Of Duty"
+  title: "Call Of Duty",
+  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbzmHy9be-yhaZjjyuXjd5xKQB9Ff4GHizq_4obgpWm4umX3wt9Dtm3rQ0DL7EOPyyjak&usqp=CAU"
 )
 
 Game.create!(
   platform: "Playstation",
-  title: "UFC"
+  title: "UFC",
+  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxIvoOCHawPIC1KNCpuKSVJ1nWaupJs8-6ZPVJ3Q9h_nxDi3Odcjt-XaasxLhdhTXW6Gw&usqp=CAU"
 )
 
 Game.create!(
   platform: "Xbox",
-  title: "WWE"
+  title: "WWE",
+  image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVmKCFQutgE4gvPnX_SHUFKTGRmjS_upx1mZK29dffaHZoHznCGZvo4BuqoDFMQGAuU2E&usqp=CAU"
 )
 
 Competition.create!(

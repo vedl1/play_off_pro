@@ -4,8 +4,8 @@
   <div class="cards">
     <% @games.each do |game| %>
       <%= link_to new_game_competition_path(game) do %>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          <%= game.title %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= game.image_url %>;)">
+         <h2><%= game.title %></h2> <br>
           <p> <%= game.platform %> </p>
         </div>
       <% end %>
