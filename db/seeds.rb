@@ -24,6 +24,12 @@ User.create!(
   gamer_tag: "gerald14k"
   )
 
+  User.create!(
+    email: "vedluhana1@gmail.com",
+    password: "123456",
+    first_name: "ved",
+    gamer_tag: "vedl1"
+    )
 Game.create!(
   platform: "PC",
   title: "FIFA"

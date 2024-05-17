@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :games do
     resources :competitions, only: [:new, :create]
   end
+  get "competitions/:id/invitation", to: "competitions#invitation", as: :competition_invitation
 end
