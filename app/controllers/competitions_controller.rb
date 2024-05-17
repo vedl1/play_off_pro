@@ -12,4 +12,8 @@ class CompetitionsController < ApplicationController
   def waiting
     #
   end
+
+  def invitation
+  end
+
 end
