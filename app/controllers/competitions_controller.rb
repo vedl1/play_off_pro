@@ -7,8 +7,10 @@ class CompetitionsController < ApplicationController
   def create
     @game = Game.find(params[:game_id])
     @competition = Competition.new(competition_params)
+    @competition.opp = User.find_by_gamer_tag(params[:competition][:gamer_tag])
     @competition.user = current_user
     @competition.game = Game.find(params[:game_id])
+    @competition.platform = @competition.game.platform
     if @competition.save
       redirect_to competition_invitation_path(@competition)
     else
@@ -27,7 +29,7 @@ class CompetitionsController < ApplicationController
   private
 
   def competition_params
-    params.require(:competition).permit(:wager,:opp_id)
+    params.require(:competition).permit(:wager,:gamer_tag)
   end
 
   def set_users

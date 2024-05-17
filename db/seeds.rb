@@ -7,6 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Competition.destroy_all
 Game.destroy_all
 User.destroy_all
 
@@ -30,6 +31,7 @@ User.create!(
     first_name: "ved",
     gamer_tag: "vedl1"
     )
+
 Game.create!(
   platform: "PC",
   title: "FIFA"
