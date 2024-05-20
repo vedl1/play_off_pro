@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[7.1]
       t.string :gamer_tag
       t.integer :win
       t.integer :loss
+      t.float :tokens, default: 100.00
 
       t.timestamps
     end
