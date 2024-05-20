@@ -5,7 +5,7 @@ class CreateCompetitions < ActiveRecord::Migration[7.1]
       t.boolean :completed
       t.references :game, null: false, foreign_key: true
       t.references :opp
-      t.boolean :accepted?
+      t.boolean :accepted, default: false
       t.float :wager
       t.string :platform
       t.timestamps

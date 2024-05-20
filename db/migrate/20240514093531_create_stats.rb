@@ -5,6 +5,9 @@ class CreateStats < ActiveRecord::Migration[7.1]
       t.references :competition, null: false, foreign_key: true
       t.string :name
       t.integer :amount
+      t.integer :kills
+      t.float :kd_ratio
+      t.integer :damage
 
       t.timestamps
     end

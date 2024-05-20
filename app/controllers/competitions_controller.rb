@@ -20,11 +20,37 @@ class CompetitionsController < ApplicationController
   end
 
   def invitation
-
+    @competition = Competition.find(params[:id])
+    if @competition.accepted
+      redirect_to competition_loading_path(@competition)
+    else
+      render "invitation"
+    end
   end
 
   def rematch
     create
+  end
+
+  def accept
+    @competition = Competition.find(params[:id])
+  end
+
+  def agree
+    @competition = Competition.find(params[:id])
+    @competition.accepted = true
+    @competition.save
+    redirect_to competition_loading_path(@competition)
+  end
+
+  def stats
+    @competition = Competition.find(params[:id])
+    @wstat = @competition.stats.second
+    @lstat = @competition.stats.first
+  end
+
+  def loading
+    @competition = Competition.find(params[:id])
   end
 
   private
