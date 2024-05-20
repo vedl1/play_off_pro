@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "competitions/:id/invitation", to: "competitions#invitation", as: :competition_invitation
   get "/loading", to: "competitions#loading"
   get "/accept", to: "competitions#accept"
+  get "/dashboard", to: "competitions#dashboard"
   root to: "pages#home"
   resources :games do
     resources :competitions, only: [:new, :create]

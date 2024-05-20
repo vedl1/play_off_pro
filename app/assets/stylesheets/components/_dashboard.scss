@@ -1,0 +1,29 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding-top: 450px;
+}
+
+ .dashboard-1 {
+  padding-top: 100px;
+  display: flex;
+  padding-left: 250px;
+}
+
+.dashboard-2 {
+  color: greenyellow;
+  padding-left: 250px;
+}
+
+.card-category {
+  color: white;
+}
+
+.top-50 {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  height: 100vh;
+  flex-direction: column;
+}
