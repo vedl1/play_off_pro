@@ -1,4 +1,4 @@
 <div class= "center-box">
-<%= image_tag "logo banner.png", width: 600 %>
-  <%= button_to "VED HAS INVITED YOU TO PLAY COD:WARFARE | ACCEPT..." , loading_path, class:"accept", method: :get %>
+  <img width= "600px" src="assets/logo banner.png">
+  <%= button_to "VED HAS INVITED YOU TO PLAY COD:WARFARE | ACCEPT...", competition_agree_path(@competition), method: :patch, class:"accept" %>
 </div>
