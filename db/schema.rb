@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_15_144626) do
     t.boolean "completed"
     t.bigint "game_id", null: false
     t.bigint "opp_id"
-    t.boolean "accepted?"
+    t.boolean "accepted", default: false
     t.float "wager"
     t.string "platform"
     t.datetime "created_at", null: false
@@ -32,14 +32,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_15_144626) do
   create_table "games", force: :cascade do |t|
     t.string "platform"
     t.string "title"
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "results", force: :cascade do |t|
     t.bigint "competition_id", null: false
-    t.string "token"
-    t.boolean "win?"
+    t.float "token"
+    t.boolean "win"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -52,6 +53,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_15_144626) do
     t.bigint "competition_id", null: false
     t.string "name"
     t.integer "amount"
+    t.integer "kills"
+    t.float "kd_ratio"
+    t.integer "damage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["competition_id"], name: "index_stats_on_competition_id"
@@ -64,6 +68,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_15_144626) do
     t.string "gamer_tag"
     t.integer "win"
     t.integer "loss"
+    t.float "tokens", default: 100.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "encrypted_password", default: "", null: false

@@ -1,17 +1,14 @@
 <div class="container games">
-    <h2>MULTIPLAYER</h2>
-    <h1>GAMES</h1>
-
-    <form action="/games">
-    <input type="text">
-    <input type="submit">
-    </form>
-   <% @games.each do |game| %>
-    <%= link_to new_game_competition_path(game) do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-        <%= game.title %>
-      <p> <%= game.platform %> </p>
-      </div>
-     <% end %>
-   <% end %>
+  <h2>MULTIPLAYER</h2>
+  <h1>GAMES</h1>
+  <div class="cards">
+    <% @games.each do |game| %>
+      <%= link_to new_game_competition_path(game) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= game.image_url %>;)">
+         <h2><%= game.title %></h2> <br>
+          <p> <%= game.platform %> </p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
