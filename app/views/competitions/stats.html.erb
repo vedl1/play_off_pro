@@ -8,9 +8,9 @@
     <div class="player-card winner">
         <%= image_tag "minanavatar.png", class:"avatar" %>
       <div class="badge winner-badge">WINNER!</div>
-      <div class="white-line">  <h2><%= @wstat.user.gamer_tag %></h2>
+      <div class="pro-badge">PRO
+        <h2><%= @wstat.user.gamer_tag %></h2>
       </div>
-      <div class="pro-badge">PRO</div>
       <div class="stats">
         <h3>IN-GAME STATISTICS:</h3>
         <p>KILLS: <%= @wstat.kills %></p>
@@ -24,8 +24,9 @@
     <div class="player-card loser">
       <%= image_tag "vedavatar.png", class:"avatar" %>
       <div class="badge loser-badge">LOSER!</div>
-      <h2><%= @lstat.user.gamer_tag %></h2>
-      <div class="pro-badge">PRO</div>
+      <div class="pro-badge">PRO
+       <h2><%= @lstat.user.gamer_tag %></h2>
+      </div>
       <div class="stats">
         <h3>IN-GAME STATISTICS:</h3>
         <p>KILLS: <%= @lstat.kills %></p>
