@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @competitions = Competition.where(opp_id: current_user.id)
+
+  end
+  def invitations
+  @competitions = Competition.where(opp_id: current_user.id)
   end
 end
