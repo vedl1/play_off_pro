@@ -1,12 +1,35 @@
 <h1>Welcome <%=current_user.gamer_tag%></h1>
-<h2>Your invitations</h2>
-<%= @competitions.each do |c| %>
-<%= link_to competition_accept_path(c) do %>
-<div class="card">
-<h3> <%=c.user.gamer_tag%> </h3>
-<h4> <%=c.game.title%> </h4>
-<h4> <%=c.platform%> </h4>
-<h4> <%=c.wager%> </h4>
-</div>
-<% end %>
-<% end %>
+
+
+  <h1 class="dashboard-1">MINAN</h1>
+  <h3 class= "dashboard-2">Verified Member</h3>
+  <%= button_to "Your Invitations", invitations_path, method: :get, class: "accept"%>
+<img class="logo-dashboard" alt="logo-dashboard" width= "600px" src="assets/logo.png">
+<img class="avatar-1" alt="avatar-1" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+
+<div class="dash-card">
+          <h3>RANK | TOKENS | RECORD | RECENT</h3>
+        </div>
+
+       <div class="steps">
+        <!-- Dashboard 1 Card -->
+        <div class="dash-card">
+          <h3>VIEW FULL RANKING HISTORY:</h3>
+        </div>
+        <!-- Dashboard 2 Card -->
+        <div class="dash-card">
+          <h3>VIEW FULL TOKENS HISTORY:</h3>
+        </div>
+        <!-- Dashboard 3 Card -->
+        <div class="dash-card">
+          <h3>VIEW FULL GAMES RECORD HISTORY:</h3>
+        </div>
+        <div>
+          <!-- Dashboard 3 Card -->
+        <div class="dash-card">
+          <h3>VIEW FULL RECENT MATCHES HISTORY:</h3>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>

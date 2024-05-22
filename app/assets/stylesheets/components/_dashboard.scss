@@ -6,24 +6,53 @@
 }
 
  .dashboard-1 {
-  padding-top: 100px;
-  display: flex;
-  padding-left: 250px;
+  color: white;
+  padding-left: 200px;
+  padding-top: 70px;
 }
 
 .dashboard-2 {
-  color: greenyellow;
-  padding-left: 250px;
+  color: yellowgreen;
+  padding-bottom: 200px;
+  padding-left: 200px;
 }
 
-.card-category {
+.dash-card {
+  background-color: #303030;
+  padding-top: 8px;
+  border-style: solid;
+  border-color: #0CB4FB;
   color: white;
+  border-radius: 20px;
+  height: 300%;
+  text-align: center;
 }
 
-.top-50 {
-  display: flex;
-  justify-content: right;
-  align-items: right;
-  height: 100vh;
-  flex-direction: column;
+.dashboard-3 {
+  padding-bottom: 10px;
+}
+
+.logo-dashboard {
+  position: fixed;
+  top: 60px;
+  right: 50px;
+  padding-top: 50px;
+}
+
+.avatar-1 {
+  position: fixed;
+  top: 150px;
+  left: 40px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.accept {
+  padding: 32px 32px; /* Padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Inline-block display */
+  font-size: 20px; /* Font size */
+  margin: 4px 2px;
 }
