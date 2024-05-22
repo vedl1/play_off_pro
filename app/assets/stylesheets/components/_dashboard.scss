@@ -7,52 +7,114 @@
 
  .dashboard-1 {
   color: white;
-  padding-left: 200px;
-  padding-top: 70px;
+  // padding-left: 200px;
+  // padding-top: 70px;
 }
 
 .dashboard-2 {
   color: yellowgreen;
-  padding-bottom: 200px;
-  padding-left: 200px;
+  // padding-bottom: 200px;
+  // padding-left: 200px;
 }
+
+
 
 .dash-card {
   background-color: #303030;
-  padding-top: 8px;
-  border-style: solid;
-  border-color: #0CB4FB;
-  color: white;
-  border-radius: 20px;
-  height: 300%;
-  text-align: center;
+  padding: 15px;
+  margin: auto;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: #0CB4FB 3px solid;
+  h3 {
+    text-align: center;
+    color: white;
+    padding-right: 10px;
+  }
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+    padding-right: 10px;
+    font-size: 55px;
+    color: #0CB4FB;
+  }
+  border-radius: 2%;
+  height: 200px;
+
+  display: flex;
+  justify-content: center;
+  #recent {
+    border-right: none !important;
+  }
+  .dash-titles {
+    padding-top: 10px;
+    width: 400px;
+    padding-left: 30px;
+    border-right: white 1px solid ;
+  }
 }
 
 .dashboard-3 {
   padding-bottom: 10px;
 }
 
+.dash-intro {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+
+.dash-steps {
+  margin: auto;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 15px;
+  width: 80%;
+}
+
+.dash-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .logo-dashboard {
-  position: fixed;
-  top: 60px;
-  right: 50px;
-  padding-top: 50px;
+  width: 400px;
 }
 
 .avatar-1 {
-  position: fixed;
-  top: 150px;
-  left: 40px;
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
+  width: 250px;
+  padding-right: 30px;
 }
 
-.accept {
-  padding: 32px 32px; /* Padding */
-  text-align: center; /* Center the text */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Inline-block display */
-  font-size: 20px; /* Font size */
-  margin: 4px 2px;
+.inv-btn {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
+
+.invitations {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  color: white;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  // padding: 10px 20px;
+  background-color: #0CB4FB; /* Padding */
+  font-family: "Audiowide";/* Center the text */
+  font-size: 43px;
+  text-decoration: none; /* Remove underline */ /* Inline-block display */
+}
+
+ .invitations:hover {
+   background-color: #04AA6D;
+   /* Green */
+   color: white;
+ }
