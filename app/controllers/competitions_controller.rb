@@ -47,6 +47,12 @@ class CompetitionsController < ApplicationController
     @competition = Competition.find(params[:id])
     @wstat = @competition.stats.second
     @lstat = @competition.stats.first
+
+    if @competition.results.first.user == current_user
+      @result = @competition.results.first
+    else
+      @result = @competition.results.second
+    end
   end
 
   def loading

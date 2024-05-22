@@ -1,7 +1,8 @@
 class ResultsController < ApplicationController
 
   def show
-
+    @competition = Competition.find(params[:competition_id])
+    @result = Result.find(params[:id])
   end
 
 
@@ -40,7 +41,6 @@ class ResultsController < ApplicationController
 
     @lstat.save
     @wstat.save
-
     redirect_to competition_stats_path(@competition)
   end
 

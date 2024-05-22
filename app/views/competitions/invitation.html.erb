@@ -1,4 +1,8 @@
-<div class= "center-box">
-  <img width= "600px" src="assets/logo banner.png">
-<h1>Awaiting Opponent To Accept Invitation...</h1>
+<div class="center-box">
+  <div class="d-flex justify-content-center w-75 mb-5">
+    <%= image_tag "PLOGO.png", height: 150, width: 150 %>
+    <%= image_tag "TARGETLOGO.png", height: 150, width: 150 %>
+    <%= image_tag "PLOGO.png", height: 150, width: 150 %>
+  </div>
+  <%= button_to "Awaiting Opponent To Accept Invitation...", competition_result_path(@competition), method: :post, class: "accept btn-custom" %>
 </div>
