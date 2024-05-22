@@ -1,35 +1,55 @@
-<h1>Welcome <%=current_user.gamer_tag%></h1>
 
+<div class="dash-intro">
+  <div class="d-flex">
+    <%= image_tag "minanavatar.png", class: "avatar-1" %>
+    <div class="dash-details">
+      <h1 class="dashboard-1">MINAN</h1>
+      <h3 class= "dashboard-2">Verified Member</h3>
+    </div>
+  </div>
 
-  <h1 class="dashboard-1">MINAN</h1>
-  <h3 class= "dashboard-2">Verified Member</h3>
-  <%= button_to "Your Invitations", invitations_path, method: :get, class: "accept"%>
-<img class="logo-dashboard" alt="logo-dashboard" width= "600px" src="assets/logo.png">
-<img class="avatar-1" alt="avatar-1" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
+  <%= image_tag "logo.png", class: "logo-dashboard" %>
+</div>
+
+<div class="inv-btn">
+  <%= button_to "INVITATIONS", invitations_path, method: :get, class: "invitations"%>
+</div>
+
 
 <div class="dash-card">
-          <h3>RANK | TOKENS | RECORD | RECENT</h3>
-        </div>
+    <div class="dash-titles">
+      <h3>Rank</h3>
+      <h1>50</h1>
+    </div>
+    <div class="dash-titles">
+      <h3>Tokens</h3>
+      <h1> <%= current_user.tokens %></h1>
+    </div>
+    <div class="dash-titles">
+      <h3>Record</h3>
+      <h1></h1>
+    </div>
+    <div class="dash-titles" id='recent'>
+      <h3>Recent</h3>
+      <h1></h1>
+    </div>
+</div>
 
-       <div class="steps">
-        <!-- Dashboard 1 Card -->
-        <div class="dash-card">
-          <h3>VIEW FULL RANKING HISTORY:</h3>
-        </div>
-        <!-- Dashboard 2 Card -->
-        <div class="dash-card">
-          <h3>VIEW FULL TOKENS HISTORY:</h3>
-        </div>
-        <!-- Dashboard 3 Card -->
-        <div class="dash-card">
-          <h3>VIEW FULL GAMES RECORD HISTORY:</h3>
-        </div>
-        <div>
-          <!-- Dashboard 3 Card -->
-        <div class="dash-card">
-          <h3>VIEW FULL RECENT MATCHES HISTORY:</h3>
-        </div>
-      </div>
-    </div>
-      </div>
-    </div>
+<div class="dassteps">
+  <!-- Dashboard 1 Card -->
+  <div class="dash-card">
+    <h3>VIEW FULL RANKING HISTORY:</h3>
+  </div>
+  <!-- Dashboard 2 Card -->
+  <div class="dash-card">
+    <h3>VIEW FULL TOKENS HISTORY:</h3>
+  </div>
+  <!-- Dashboard 3 Card -->
+  <div class="dash-card">
+    <h3>VIEW FULL GAMES RECORD HISTORY:</h3>
+  </div>
+    <!-- Dashboard 3 Card -->
+  <div class="dash-card">
+    <h3>VIEW FULL RECENT MATCHES HISTORY:</h3>
+  </div>
+</div>
