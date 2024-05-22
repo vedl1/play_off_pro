@@ -1,2 +1,40 @@
-<h1>kills = <%= @wstat.kills %></h1>
-<h1>kills = <%= @lstat.kills %></h1>
+<div class="match-container">
+  <div class="header">
+  </div>
+  <div class="game-title">
+    <h1>CALL OF DUTY: WARZONE</h1>
+  </div>
+  <div class="stats-container">
+    <div class="player-card winner">
+        <%= image_tag "minanavatar.png", class:"avatar" %>
+      <div class="badge winner-badge">WINNER!</div>
+      <div class="white-line">  <h2><%= @wstat.user.gamer_tag %></h2>
+      </div>
+      <div class="pro-badge">PRO</div>
+      <div class="stats">
+        <h3>IN-GAME STATISTICS:</h3>
+        <p>KILLS: <%= @wstat.kills %></p>
+        <p>KD RATIO: <%= @wstat.kd_ratio %></p>
+        <p>DAMAGE: <%= @wstat.damage %></p>
+      </div>
+    </div>
+    <div class="vs">
+      <h2>VS</h2>
+    </div>
+    <div class="player-card loser">
+      <%= image_tag "vedavatar.png", class:"avatar" %>
+      <div class="badge loser-badge">LOSER!</div>
+      <h2><%= @lstat.user.gamer_tag %></h2>
+      <div class="pro-badge">PRO</div>
+      <div class="stats">
+        <h3>IN-GAME STATISTICS:</h3>
+        <p>KILLS: <%= @lstat.kills %></p>
+        <p>KD RATIO: <%= @lstat.kd_ratio %></p>
+        <p>DAMAGE: <%= @lstat.damage %></p>
+      </div>
+    </div>
+  </div>
+  <div class="rewards-button">
+    <button>View Rewards</button>
+  </div>
+</div>
