@@ -9,5 +9,14 @@ h1 {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background-color: #333;
+  background-color: black;
+}
+
+.invitation-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #3333;
 }

@@ -76,9 +76,22 @@ body {
 }
 
 .step-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   background-color: #0CB4FB;
   border-radius: 10px;
   padding: 20px;
+  height: 280px;
+
+  img {
+    height: 150px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
 }
 
 .step-card-kills {
