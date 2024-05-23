@@ -1,11 +1,11 @@
-<h2>Your invitations</h2>
+<h1>Your invitations</h1>
 <%= @competitions.each do |c| %>
 <%= link_to competition_accept_path(c) do %>
-<div class="card">
-<h3> <%=c.user.gamer_tag%> </h3>
-<h4> <%=c.game.title%> </h4>
-<h4> <%=c.platform%> </h4>
-<h4> <%=c.wager%> </h4>
-</div>
+  <div class="center-box">
+    <h3> <%=c.user.gamer_tag%> </h3>
+    <h4> <%=c.game.title%> </h4>
+    <h4> <%=c.platform%> </h4>
+    <h4> <%=c.wager%> </h4>
+  </div>
 <% end %>
 <% end %>

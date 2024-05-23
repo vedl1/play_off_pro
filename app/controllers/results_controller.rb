@@ -3,6 +3,7 @@ class ResultsController < ApplicationController
   def show
     @competition = Competition.find(params[:competition_id])
     @result = Result.find(params[:id])
+    @opp = User.find(@competition.opp_id)
   end
 
 
