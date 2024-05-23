@@ -1,22 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background for the page */
+  color: #ecf0f1; /* Light font color for readability */
+}
 
 h1 {
-  color: rgb(255, 252, 252)
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 36px;
+}
+
+.invitations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted min width for smaller boxes */
+  gap: 10px; /* Reduced gap between items */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.invitation-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.invitation-link:hover .center-box {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .center-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   flex-direction: column;
-  background-color: black;
+  background-color: #1e1e1e; /* Darker gray background */
+  padding: 10px; /* Reduced padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  height: 200px; /* Fixed height to make boxes more square */
 }
 
-.invitation-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-direction: column;
-  background-color: #3333;
+.center-box h3, .center-box h4 {
+  margin: 5px 0;
+}
+
+.center-box h3 {
+  font-size: 20px; /* Reduced font size */
+  color: #0CB4FB; /* Light blue for gamer tag */
+}
+
+.center-box h4 {
+  font-size: 16px; /* Reduced font size */
+  color: #ecf0f1; /* Light color for other details */
 }
