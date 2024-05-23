@@ -27,29 +27,18 @@
     </div>
     <div class="dash-titles">
       <h3>Record</h3>
-      <h1></h1>
+      <% if @wins || @losses %>
+        <h1><%= @wins %> - <%= @losses %></h1>
+      <% else %>
+        <h1>N/A</h1>
+      <% end %>
     </div>
     <div class="dash-titles" id='recent'>
       <h3>Recent</h3>
-      <h1></h1>
+      <% if @r %>
+        <h1><%= @r %></h1>
+      <% else %>
+        <h1>N/A</h1>
+      <% end %>
     </div>
-</div>
-
-<div class="dassteps">
-  <!-- Dashboard 1 Card -->
-  <div class="dash-card">
-    <h3>VIEW FULL RANKING HISTORY:</h3>
-  </div>
-  <!-- Dashboard 2 Card -->
-  <div class="dash-card">
-    <h3>VIEW FULL TOKENS HISTORY:</h3>
-  </div>
-  <!-- Dashboard 3 Card -->
-  <div class="dash-card">
-    <h3>VIEW FULL GAMES RECORD HISTORY:</h3>
-  </div>
-    <!-- Dashboard 3 Card -->
-  <div class="dash-card">
-    <h3>VIEW FULL RECENT MATCHES HISTORY:</h3>
-  </div>
 </div>
