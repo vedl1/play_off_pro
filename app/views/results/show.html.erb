@@ -13,8 +13,6 @@
         </div>
   </div>
 
-          <%= @competition.game.title %>
-
    <div class="match-container">
     <div class="header">
     </div>
@@ -22,17 +20,16 @@
       <div class="social-card">
           <h2>@<%= @result.user.gamer_tag %> BEAT @<%= @opp.gamer_tag %> AT
           <%= @competition.game.title %> AT <%= @result.created_at %></h2>
-
-          <h2> GAINS + <div class = "green-text"><%= @result.token %></div> NICE! </h2>
+                    <h3>YOU HAVE WON <div class = "green-text"><%= @result.token %></div> TOKENS</h3>
           <h2> SHARE TO: X, Facebook, Instagram </h2>
     </div>
   </div>
 </div>
 
 
-          <%# <%= @result.user.gamer_tag %> %>
+          <%# <%= @result.user.gamer_tag %>
           <%# <%= @result.win %>
-          <%# <%= @opp.gamer_tag %> %>
-          <%# <%= @competition.game.title %> %>
-          <%# <%= @result.token %> %>
-          <%# <%= @result.created_at %> %> %>
+          <%# <%= @opp.gamer_tag %>
+          <%# <%= @competition.game.title %>
+          <%# <%= @result.token %>
+          <%# <%= @result.created_at %>
