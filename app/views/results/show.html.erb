@@ -1,18 +1,17 @@
 <div class="match-container">
   <div class="header">
-  </div>
+</div>
   <div class="game-title">
     <h1>CALL OF DUTY: WARZONE</h1>
   </div>
-  <div class="stats-container">
-    <div class="player-card winner">
+  <div class="player-card winner">
         <%= image_tag "minanavatar.png", class:"avatar" %>
-      <div class="pro-badge">PRO </div>
+      <div class="badge winner-badge">WINNER!</div>
+      <div class="pro-badge">PRO
+        <h2><%= @result.user.gamer_tag %></h2>
       </div>
-       <div class="badge-winner-results">WINNER!</div>
-
-      <div class="player-card loser">
-      <%= image_tag "vedavatar.png", class:"avatar" %>
-
-
+      <div class="stats">
+        <h3>IN-GAME STATISTICS:</h3>
+        <p>KILLS: <%= @result.user.stats.last.kills %></p>
       </div>
+    </div>
