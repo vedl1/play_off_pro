@@ -22,13 +22,14 @@
 }
 
 .match-container {
-  background-color: #111111; /* Darker background for better contrast */
+  background-color: #111111bd; /* Darker background for better contrast */
   padding: 20px;
   text-align: center;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
   max-width: 800px;
   margin: 20px auto;
+  height: fit-content;
 
   .header {
     display: flex;
@@ -100,8 +101,10 @@
       .social-link {
         color: #0CB4FB;
         text-decoration: none;
-        margin: 0 5px;
+        margin: 15px 5px;
         transition: color 0.3s;
+        font-size: 35px;
+        width: 60%;
 
         &:hover {
           color: #ffffff;

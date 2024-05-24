@@ -1,3 +1,4 @@
+<div class="form-background">
 <div class = "split-page">
   <div class="match-container">
     <div class="header">
@@ -7,13 +8,13 @@
           <%= image_tag "minanavatar.png", class:"avatar" %>
         <div class="pro-badge">PRO</div>
           <h2><%= @result.user.gamer_tag %></h2>
-                   <div class="badge-winner-results">WINNER!</div>
-                    <h3>YOU HAVE WON <div class = "green-text"><%= @result.token %></div> TOKENS</h3>
+              <div class="badge-winner-results">WINNER!</div>
+                <h3>YOU HAVE WON <div class = "green-text"><%= @result.token %></div> TOKENS</h3>
           </div>
         </div>
   </div>
 
-  <div class="match-container">
+<div class="match-container">
   <div class="header">
     <!-- Add any header content here if needed -->
   </div>
@@ -21,26 +22,20 @@
     <div class="social-card">
       <h2>@<%= @result.user.gamer_tag %> BEAT @<%= @opp.gamer_tag %> AT <%= @competition.game.title %> AT <%= @result.created_at.strftime("%B %d, %Y %H:%M") %></h2>
       <h3>YOU HAVE <span class="green-text"> WON <%= @result.token %></span> TOKENS</h3>
-      <h2>GO CHECKOUT YOUR DASHBOARD!</h2>
+       <%= button_to  "GO CHECKOUT YOUR DASHBOARD!", dashboard_path, method: :get, class:"btn mt-4 mb-4" %>
 
-      <h2>SHARE TO:
+      <h2>SHARE TO:</h2>
+      <div class="d-flex justify-content-around mt-3">
         <%= link_to 'https://twitter.com/?lang=en', class: 'social-link' do %>
-        <div class = "icon-social" >
-          <%= image_tag "social.png" %>
-        </div>
+          <i class="fa-brands fa-x-twitter"></i>
         <% end %>
-        <%= link_to 'Facebook', 'https://en-gb.facebook.com/', class: 'social-link' %>,
-        <%= link_to 'Instagram', 'https://www.instagram.com/', class: 'social-link' %>
-      </h2>
+        <%= link_to 'https://en-gb.facebook.com/', class: 'social-link' do %>
+          <i class="fa-brands fa-facebook"></i>
+        <% end %>
+        <%= link_to 'https://www.instagram.com/', class: 'social-link' do %>
+          <i class="fa-brands fa-square-instagram"></i>
+        <% end %>
     </div>
   </div>
 </div>
-
-
-
-          <%# <%= @result.user.gamer_tag %>
-          <%# <%= @result.win %>
-          <%# <%= @opp.gamer_tag %>
-          <%# <%= @competition.game.title %>
-          <%# <%= @result.token %>
-          <%# <%= @result.created_at %>
+</div>
