@@ -31,7 +31,7 @@
     </div>
   </section>
           <div class="container">
-            <h3 class="text-white">Games</h3>
+            <h2 class="text-white text-center">Games</h2>
           <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -67,27 +67,36 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div class="container">
-            <h3 class="text-white">Players Of The Week:</h3>
-    <div class="container">
-      <div class="steps pow">
-        <!-- Player 1 Card -->
-        <div class="pow">
-          <h3>VEDL1</h3>
-          <%= image_tag "vedavatar.png" %>
-          <p>the best gamer</p>
-        </div>
-        <!-- Player 2 Card -->
-        <div class="pow">
-          <h3>MINKAH</h3>
-          <%= image_tag "minanavatar.png" %>
-          <p>the most fashionable gamer</p>
-        </div>
-        <!-- Step 3 Card -->
-        <div class="pow">
-          <h3>GERALD</h3>
-          <%= image_tag "geraldavatar.png" %>
-          <p>the coldest gamer</p>
-        </div>
+</div>
+    <!-- Players of the Week Section -->
+<section class="players-of-the-week">
+  <div class="container">
+    <h2>Players Of The Week</h2>
+    <div class="winner-cards">
+      <!-- Player 2 Card (2nd Place) -->
+      <div class="winner-card second-place">
+        <h3>VEDL1</h3>
+        <%= image_tag "vedavatar.png" %>
+        <p>the best gamer</p>
+        <span class="place-badge">2nd</span>
+      </div>
+      <!-- Player 1 Card (1st Place) -->
+      <div class="winner-card first-place">
+        <h3>MINKAH</h3>
+        <%= image_tag "minanavatar.png" %>
+        <p>the most fashionable gamer</p>
+        <span class="place-badge">1st</span>
+      </div>
+      <!-- Player 3 Card (3rd Place) -->
+      <div class="winner-card third-place">
+        <h3>GERALD</h3>
+        <%= image_tag "geraldavatar.png" %>
+        <p>the coldest gamer</p>
+        <span class="place-badge">3rd</span>
       </div>
     </div>
+  </div>
+</section>
+ <div class="footer mt-4">
+          <%= "&copy; #{Time.now.year} PlayOffPro. All rights reserved.".html_safe %>
+  </div>
