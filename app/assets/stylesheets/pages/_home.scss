@@ -192,3 +192,108 @@ body {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+/* Players of the Week Section */
+.players-of-the-week {
+  background-color: #000000;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.players-of-the-week h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.winner-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.winner-card {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  width: 200px;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.winner-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.winner-card p {
+  font-size: 16px;
+}
+
+.winner-card img {
+  max-width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Place Badge */
+.place-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 60px;
+  height: 34.64px;
+  background-color: #ffd700; /* Gold color */
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Audiowide";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* Additional styling for each place */
+.first-place .place-badge {
+  background-color: #ffd700; /* Gold */
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.second-place .place-badge {
+  background-color: #c0c0c0; /* Silver */
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.7), 0 0 20px rgba(192, 192, 192, 0.5);
+}
+
+.third-place .place-badge {
+  background-color: #cd7f32; /* Bronze */
+  box-shadow: 0 0 15px rgba(205, 127, 50, 0.7), 0 0 20px rgba(205, 127, 50, 0.5);
+}
+
+.first-place {
+  transform: scale(1.1);
+}
+
+.second-place,
+.third-place {
+  transform: scale(0.9);
+}
+
+// .winner-card:hover {
+//   transform: translateY(-10px);
+//   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+//   transition: transform 0.6s ease, box-shadow 0.6s ease;
+// }
+
+
+.footer {
+  background: linear-gradient(90deg, #0CB4FB, #E936CD);
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0 10px;
+  bottom: 0;
+  width: 100%;
+}
