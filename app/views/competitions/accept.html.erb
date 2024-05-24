@@ -4,5 +4,5 @@
     <%= image_tag "TARGETLOGO.png", height: 150, width: 150 %>
     <%= image_tag "PLOGO.png", height: 150, width: 150 %>
   </div>
-  <%= button_to "VEDL1 HAS INVITED YOU TO PLAY | CLICK TO ACCEPT", competition_agree_path(@competition), method: :patch, class:"btn" %>
+  <%= button_to  "#{@competition.user.gamer_tag} HAS INVITED YOU TO PLAY | CLICK TO ACCEPT", competition_agree_path(@competition), method: :patch, class:"btn" %>
 </div>

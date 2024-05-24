@@ -22,8 +22,10 @@ class ResultsController < ApplicationController
     @lresult.win = false
     @wresult.token = (@competition.wager * 2)
     @lresult.token = (@competition.wager * 2)
-    current_user.tokens + @wresult.token
-    @opp.tokens - @lresult.token
+    current_user.tokens += (@competition.wager * 2)
+    current_user.save
+    @opp.tokens -= (@competition.wager * 2)
+    @opp.save
     @wresult.save
     @lresult.save
 
