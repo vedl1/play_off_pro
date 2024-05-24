@@ -13,18 +13,29 @@
         </div>
   </div>
 
-   <div class="match-container">
-    <div class="header">
-    </div>
-    <div class="stats-container">
-      <div class="social-card">
-          <h2>@<%= @result.user.gamer_tag %> BEAT @<%= @opp.gamer_tag %> AT
-          <%= @competition.game.title %> AT <%= @result.created_at %></h2>
-                    <h3>YOU HAVE WON <div class = "green-text"><%= @result.token %></div> TOKENS</h3>
-          <h2> SHARE TO: X, Facebook, Instagram </h2>
+  <div class="match-container">
+  <div class="header">
+    <!-- Add any header content here if needed -->
+  </div>
+  <div class="stats-container">
+    <div class="social-card">
+      <h2>@<%= @result.user.gamer_tag %> BEAT @<%= @opp.gamer_tag %> AT <%= @competition.game.title %> AT <%= @result.created_at.strftime("%B %d, %Y %H:%M") %></h2>
+      <h3>YOU HAVE <span class="green-text"> WON <%= @result.token %></span> TOKENS</h3>
+      <h2>GO CHECKOUT YOUR DASHBOARD!</h2>
+
+      <h2>SHARE TO:
+        <%= link_to 'https://twitter.com/?lang=en', class: 'social-link' do %>
+        <div class = "icon-social" >
+          <%= image_tag "social.png" %>
+        </div>
+        <% end %>
+        <%= link_to 'Facebook', 'https://en-gb.facebook.com/', class: 'social-link' %>,
+        <%= link_to 'Instagram', 'https://www.instagram.com/', class: 'social-link' %>
+      </h2>
     </div>
   </div>
 </div>
+
 
 
           <%# <%= @result.user.gamer_tag %>

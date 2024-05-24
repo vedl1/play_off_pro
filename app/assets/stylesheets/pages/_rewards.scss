@@ -1,78 +1,116 @@
-  .split-page {
+.split-page {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.badge-winner-results {
+  background-color: #4CAF50;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pro-badge {
+  background-color: #0CB4FB;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.match-container {
+  background-color: #111111; /* Darker background for better contrast */
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  max-width: 800px;
+  margin: 20px auto;
+
+  .header {
     display: flex;
-    width: 90%;
-    margin: auto;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 10px 20px;
   }
 
-  .badge-winner-results{
-    background-color: #4CAF50;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-  }
+  .stats-container {
+    .reward-card {
+      background-color: #000000;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 0 20px;
+      width: 400px;
+      text-align: left;
+      position: relative;
 
-  .pro-badge {
-    background-color: #0CB4FB;
-    padding: 5px 10px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-bottom: 10px;
-  }
+      .avatar {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
 
-  .match-container {
-    background-color: #000000;
-    padding: 20px;
-    text-align: center;
+      .badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 20px;
+      .green-text {
+        color: #4CAF50;
+      }
+
+      &.winner-badge {
+        background-color: #4CAF50;
+      }
     }
 
-      .reward-card {
-        background-color: #000000;
-        border-radius: 10px;
-        padding: 20px;
-        margin: 0 20px;
-        width: 250px;
-        text-align: left;
-        position: relative;
+    .social-card {
+      background-color: #333333;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 20px;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 
-        .avatar {
-          width: 250px;
-          height: 250px;
-          border-radius: 50%;
-          margin-bottom: 10px;
-        }
+      h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
 
-        .badge {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          padding: 5px 10px;
-          border-radius: 5px;
-          font-weight: bold;
-        }
+      h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
 
         .green-text {
           color: #4CAF50;
+          font-weight: bold;
         }
+      }
 
-          &.winner-badge {
-            background-color: #4CAF50;
-          }
-        }
+      .social-link {
+        color: #0CB4FB;
+        text-decoration: none;
+        margin: 0 5px;
+        transition: color 0.3s;
 
-        .social-card {
-          background-color: #333333;
-          border-radius: 10px;
-          padding: 20px;
-          margin: 0 20px;
-          width: 350px;
-          text-align: left;
-          position: relative;
+        &:hover {
+          color: #ffffff;
         }
+        .icon-social{
+          width: 5px;
+          height: 5px;
+        }
+      }
+    }
   }
+}
